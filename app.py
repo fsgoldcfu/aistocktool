@@ -80,7 +80,7 @@ else:
     prompt = f"根據{risk}等級，推介3隻 {market} 短炒標的"
 
 if st.button("執行 AI 分析"):
-    model = genai.GenerativeModel("gemini-1.5-flash", system_instruction=SYSTEM_INSTRUCTION)
+    model = genai.GenerativeModel("gemini-3-flash", system_instruction=SYSTEM_INSTRUCTION)
     with st.spinner("AI 老師傅執緊數據..."):
         response = model.generate_content(prompt)
         st.markdown(response.text)
